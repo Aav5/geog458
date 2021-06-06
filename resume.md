@@ -10,7 +10,7 @@
 
 - Junior GIS student with extensive project experience in data science, front end development, back-end (database construction and management), design, and UX research
 
-> # Work Experience
+> Work Experience
 
 1. Telecommunication Freelancing
  Telecommunication Consultant 						                    June 2020 – Sept. 2020
@@ -29,7 +29,7 @@
 -	Each group of children learns from teachers trained in imparting the Akanksha curriculum
 -	I was a volunteer for teaching students at an Akanksha Foundation center to teach underprivileged children English and Mathematics
 
-> ## University Name 1 (Seattle, WA)
+> University Name 1 (Seattle, WA)
 
 - UNIVERSITY OF WASHINGTON, SCHOOL OF ARTS AND SCIENCE					     Seattle, WA
 Bachelor of Arts in Geography; concentration in Data Science				     Sept. 2018 - June 2022
