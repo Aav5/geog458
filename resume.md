@@ -31,6 +31,6 @@
 
 > University (Seattle, WA)
 
-![University of Washington](https://github.com/Aav5/geog458/blob/main/UW.png)
+![University of Washington](UW.png)
 - UNIVERSITY OF WASHINGTON, SCHOOL OF ARTS AND SCIENCE					     Seattle, WA
 Bachelor of Arts in Geography; concentration in Data Science				     Sept. 2018 - June 2022
