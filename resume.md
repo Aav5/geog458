@@ -2,32 +2,32 @@
 
 ### Aniruddh99@yahoo.com
 
-[http://www.aniruddh.com]
+http://www.aniruddh.com
 
-[http://www.linkedin.com/in/aniruddh]
+http://www.linkedin.com/in/aniruddh
 
-#Summary
+# Summary
 
 - Junior GIS student with extensive project experience in data science, front end development, back-end (database construction and management), design, and UX research
 
 # Work Experience (only last 10 years)
 
-- Telecommunication Freelancing
+1. Telecommunication Freelancing
  Telecommunication Consultant 						                    June 2020 – Sept. 2020
- 1.	Market report Study on telecommunication
- 2.	Research on new technology in telecommunication
- 3.	Consolidation of Telecom Company and future effects
+-	Market report Study on telecommunication
+-	Research on new technology in telecommunication
+-	Consolidation of Telecom Company and future effects
 
-- AIESEC										                Athens, Greece
+2. AIESEC										                Athens, Greece
  Assistant Teacher Internship 							 	     May 2018 – June 2018
- 1.	Volunteer experience serving young people who seek to develop themselves and contribute to the Sustainable Development Goals
- 2.	Main responsibilities were creating engaging lesson plans for students between ages group 5-18 studying in a local school in Athens, Greece
+-	Volunteer experience serving young people who seek to develop themselves and contribute to the Sustainable Development Goals
+-	Main responsibilities were creating engaging lesson plans for students between ages group 5-18 studying in a local school in Athens, Greece
 
-- Akanksha Foundation									Mumbai, India  
+3. Akanksha Foundation									Mumbai, India  
  Assistant Teacher Internship							                     June 2015- June 2018
- 1.	Worked on a strong after-school model can effectively fill the gaps in the school system
- 2.	Each group of children learns from teachers trained in imparting the Akanksha curriculum
- 3.	I was a volunteer for teaching students at an Akanksha Foundation center to teach underprivileged children English and Mathematics
+-	Worked on a strong after-school model can effectively fill the gaps in the school system
+-	Each group of children learns from teachers trained in imparting the Akanksha curriculum
+-	I was a volunteer for teaching students at an Akanksha Foundation center to teach underprivileged children English and Mathematics
 
 ## University Name 1 (Seattle, WA)
 
