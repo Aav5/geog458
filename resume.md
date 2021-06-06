@@ -29,8 +29,8 @@
 -	Each group of children learns from teachers trained in imparting the Akanksha curriculum
 -	I was a volunteer for teaching students at an Akanksha Foundation center to teach underprivileged children English and Mathematics
 
-> University Name 1 (Seattle, WA)
+> University (Seattle, WA)
 
-![University of Washington](https://www.google.com/imgres?imgurl=https%3A%2F%2Fenvironment.uw.edu%2Fwp-content%2Fthemes%2Fcoenv-wordpress-theme%2Fassets%2Fimg%2Flogo-1200x1200.jpg&imgrefurl=https%3A%2F%2Fenvironment.uw.edu%2F&tbnid=2HQIMvsnI58J_M&vet=12ahUKEwi7u_fx84HxAhUUkJ4KHUzpDNgQMygEegUIARDEAQ..i&docid=_zlMmUgYg3J5yM&w=1200&h=1200&itg=1&q=university%20of%20washington&hl=en&ved=2ahUKEwi7u_fx84HxAhUUkJ4KHUzpDNgQMygEegUIARDEAQ)
+![University of Washington](https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fm%2F13-131853_logo-university-of-washington-hd-png-download.png&imgrefurl=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2FiRRToo_logo-university-of-washington-hd-png-download%2F&tbnid=TmiteLMJWD4JJM&vet=12ahUKEwi7u_fx84HxAhUUkJ4KHUzpDNgQMygTegUIARDjAQ..i&docid=1Y6CDtMSD3WK5M&w=860&h=900&itg=1&q=university%20of%20washington&hl=en&ved=2ahUKEwi7u_fx84HxAhUUkJ4KHUzpDNgQMygTegUIARDjAQ)
 - UNIVERSITY OF WASHINGTON, SCHOOL OF ARTS AND SCIENCE					     Seattle, WA
 Bachelor of Arts in Geography; concentration in Data Science				     Sept. 2018 - June 2022
