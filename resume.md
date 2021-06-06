@@ -1,10 +1,10 @@
-# Aniruddh Vardhan
+## Aniruddh Vardhan
 
 #### Aniruddh99@yahoo.com
 
-http://www.aniruddh.com
+[http://www.aniruddh6887667.com]
 
-http://www.linkedin.com/in/aniruddh
+[http://www.linkedin.com/in/aniruddh6776668]
 
 # Summary
 
