@@ -1,6 +1,6 @@
 # Aniruddh Vardhan
 
-### Aniruddh99@yahoo.com
+#### Aniruddh99@yahoo.com
 
 http://www.aniruddh.com
 
