@@ -10,7 +10,7 @@
 
 - Junior GIS student with extensive project experience in data science, front end development, back-end (database construction and management), design, and UX research
 
-> Work Experience (only last 10 years)
+> # Work Experience
 
 1. Telecommunication Freelancing
  Telecommunication Consultant 						                    June 2020 – Sept. 2020
