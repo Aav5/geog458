@@ -39,7 +39,7 @@
   var airport = null;
 
   // 4. build up a set of colors from colorbrewer's dark2 category
-  var colors = chroma.scale('Dark2').mode('lch').colors(13);
+  // var colors = chroma.scale('Dark2').mode('lch').colors(13);
 
   // Get GeoJSON and put on it on the map when it loads
   airport = L.geoJson.ajax("assets/airports.geojson", {
@@ -64,7 +64,7 @@
 
 
   // 6. Set function for color ramp
-  colors = chroma.scale('YlOrRd').colors(5);
+  var colors = chroma.scale('YlOrRd').colors(5);
 
   function setColor(density) {
       var id = 0;
@@ -102,7 +102,7 @@
 
       // Create Div Element and Populate it with HTML
       var div = L.DomUtil.create('div', 'legend');
-      div.innerHTML += '<b># Airports have air control tower or not</b><br />';
+      div.innerHTML += '<b>Airports have air control tower or not</b><br />';
       div.innerHTML += '<i class="fas fa-plane-departure"></i><p>Airport with control tower</p>';
       div.innerHTML += '<i class="far fa-dot-circle"></i><p>Airport without control tower</p>';
       div.innerHTML += '<b># Airports in the state</b><br/>';
@@ -120,7 +120,7 @@
   legend.addTo(mymap);
 
   // 12. Add a scale bar to map
-  L.control.scale({position: 'bottomleft'}).addTo(mymap);
+  L.control.scale({position: 'topright'}).addTo(mymap);
 
 </script>
 </body>
