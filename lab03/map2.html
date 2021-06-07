@@ -52,9 +52,9 @@
            + feature.properties.CNTL_TWR);
       },
       pointToLayer: function (feature, latlng) {
-          var icon = <i class = "fas fa-plane"></i>;
+          var icon = "fas fa-plane";
           if (feature.properties.CNTL_TWR == "Y") {
-            icon = <i class = "far fa-dot-circle"></i>;
+            icon = "far fa-dot-circle";
           }
           return L.marker(latlng, {icon: L.divIcon({className: icon })});
       },
