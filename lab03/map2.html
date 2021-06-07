@@ -38,28 +38,23 @@
   // Null variable that will hold cell tower data
   var airport = null;
 
-
   // 4. build up a set of colors from colorbrewer's dark2 category
   var colors = chroma.scale('Dark2').mode('lch').colors(13);
 
-  // // 5. dynamically append style classes to this page. This style classes will be used for colorize the markers.
-  // for (i = 0; i < 13; i++) {
-  //     $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
-  // }
-
   // Get GeoJSON and put on it on the map when it loads
-  airport= L.geoJson.ajax("assets/airports.geojson", {
+  airport = L.geoJson.ajax("assets/airports.geojson", {
       // assign a function to the onEachFeature parameter of the cellTowers object.
       // Then each (point) feature will bind a popup window.
       // The content of the popup window is the value of `feature.properties.company`
       onEachFeature: function (feature, layer) {
           layer.bindPopup(
-          "Airport:" + feature.properties.AIRPT_NAME + "has an air traffic control tower -" + feature.properties.CNTL_TWR);
+          "Airport: " + feature.properties.AIRPT_NAME + "has an air traffic control tower -"
+           + feature.properties.CNTL_TWR);
       },
       pointToLayer: function (feature, latlng) {
-          var icon = "fas fa-plane";
+          var icon = <i class = "fas fa-plane"></i>;
           if (feature.properties.CNTL_TWR == "Y") {
-            icon = "far fa-dot-circle fa-xs";
+            icon = <i class = "far fa-dot-circle"></i>;
           }
           return L.marker(latlng, {icon: L.divIcon({className: icon })});
       },
@@ -99,7 +94,6 @@
       style: style
   }).addTo(mymap);
 
-
   // 9. Create Leaflet Control Object for Legend
   var legend = L.control({position: 'topright'});
 
@@ -110,7 +104,7 @@
       var div = L.DomUtil.create('div', 'legend');
       div.innerHTML += '<b># Airports have air control tower or not</b><br />';
       div.innerHTML += '<i class="fas fa-plane-departure"></i><p>Airport with control tower</p>';
-      div.innerHTML += '<i class="far fa-dot-circle fa-xs"></i></i><p>Airport without control tower</p>';
+      div.innerHTML += '<i class="far fa-dot-circle fa-xs"></i><p>Airport without control tower</p>';
       div.innerHTML += '<b># Airports in the state</b><br/>';
       div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p> 61+ </p>';
       div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p> 46-60 </p>';
@@ -126,7 +120,7 @@
   legend.addTo(mymap);
 
   // 12. Add a scale bar to map
-  L.control.scale({position: 'bottomleft'}).addTo(mymap);
+  L.control.scale({position: 'bottomright'}).addTo(mymap);
 
 </script>
 </body>
