@@ -136,8 +136,7 @@
 
   // 8. Add county polygons
   // create counties variable, and assign null to it.
-  var counties = null;
-  counties = L.geoJson.ajax("assets/wacountydata.geojson", {
+  L.geoJson.ajax("assets/wacountydata.geojson", {
       style: style
   }).addTo(mymap);
 
