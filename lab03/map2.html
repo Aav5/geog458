@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cell Towers in Washington (2010)</title>
+  <title>Airports in US</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -25,8 +25,8 @@
 
   // 1. Create a map object.
   var mymap = L.map('map', {
-      center: [47.7511, -120.7401],
-      zoom: 7,
+      center: [39.828, -98.579],
+      zoom: 5,
       maxZoom: 10,
       minZoom: 3,
       detectRetina: true});
@@ -53,17 +53,20 @@
       // Then each (point) feature will bind a popup window.
       // The content of the popup window is the value of `feature.properties.company`
       onEachFeature: function (feature, layer) {
-          layer.bindPopup(feature.properties.LICENSEE);
-          return feature.properties.LOCCOUNTY;
+          layer.bindPopup(
+          "Airport:" + feature.properties.AIRPT_NAME + "has an air traffic control tower -" + feature.properties.CNTL_TWR);
       },
       pointToLayer: function (feature, latlng) {
-          var id = 0;
-          if (feature.properties.CNTL_TWR == "Y") { id = 0; }
-          else if (feature.properties.CNTL_TWR == "N")  { id = 1; }
-          return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-signal marker-color-' + (id + 1).toString() })});
+          var icon = "fas fa-plane";
+          if (feature.properties.CNTL_TWR == "Y") {
+            icon = "far fa-dot-circle fa-xs";
+          }
+          return L.marker(latlng, {icon: L.divIcon({className: icon })});
       },
-      attribution: 'Cell Tower Data &copy; HIFLD | Washington counties &copy; Washington Data & Research | Base Map &copy; CartoDB | Made By Bo Zhao'
+      // other details were not available as the data soucre no more exists
+      attribution: 'Airport Data &copy; DATA.GOV'
   }).addTo(mymap);
+
 
   // 6. Set function for color ramp
   colors = chroma.scale('YlOrRd').colors(5);
@@ -78,17 +81,17 @@
       return colors[id];
   }
 
-  // // 7. Set style function that sets fill color.md property equal to cell tower density
-  // function style(feature) {
-  //     return {
-  //         fillColor: setColor(feature.properties.CTNUM / (feature.properties.POP / 100000)),
-  //         fillOpacity: 0.4,
-  //         weight: 2,
-  //         opacity: 1,
-  //         color: '#b4b4b4',
-  //         dashArray: '4'
-  //     };
-  // }
+  // 7. Set style function that sets fill color.md property equal to cell tower density
+  function style(feature) {
+      return {
+          fillColor: setColor(feature.properties.count),
+          fillOpacity: 0.4,
+          weight: 2,
+          opacity: 1,
+          color: '#b4b4b4',
+          dashArray: '4'
+      };
+  }
 
   // 8. Add county polygons
   // create counties variable, and assign null to it.
@@ -105,26 +108,16 @@
 
       // Create Div Element and Populate it with HTML
       var div = L.DomUtil.create('div', 'legend');
-      div.innerHTML += '<b># Cell Tower per 100k residents</b><br />';
+      div.innerHTML += '<b># Airports have air control tower or not</b><br />';
+      div.innerHTML += '<i class="fas fa-plane-departure"></i><p>Airport with control tower</p>';
+      div.innerHTML += '<i class="far fa-dot-circle fa-xs"></i></i><p>Airport without control tower</p>';
+      div.innerHTML += '<b># Airports in the state</b><br/>';
       div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p> 61+ </p>';
       div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p> 46-60 </p>';
       div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p> 12-45 </p>';
       div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 3-11 </p>';
       div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0-2 </p>';
-      div.innerHTML += '<hr><b>Company<b><br />';
-      div.innerHTML += '<i class="fa fa-signal marker-color-1"></i><p> AT&T </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-2"></i><p> Eastern Sub-RSA </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-3"></i><p> McDaniel </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-4"></i><p> New Cingular </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-5"></i><p> Oregon RSA </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-6"></i><p> RCC Minnesota </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-7"></i><p> Seattle SMSA </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-8"></i><p> US Cellular - Richland </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-9"></i><p> US Cellular -Washington </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-10"></i><p> Verizon </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-11"></i><p> Washington RSA </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-12"></i><p> Western Sub-RSA </p>';
-      div.innerHTML += '<i class="fa fa-signal marker-color-13"></i><p> Yakima </p>';
+
       // Return the Legend div containing the HTML content
       return div;
   };
