@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <style>
 
-      html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
+      html, body, #map { width: 100%; height: 100%; margin: 0;}
 
   </style>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -35,26 +35,23 @@
   L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(mymap);
 
   // 3. Add cell towers GeoJSON Data
-  // Null variable that will hold cell tower data
+  // Null variable that will hold airport data
   var airport = null;
-
-  // 4. build up a set of colors from colorbrewer's dark2 category
-  // var colors = chroma.scale('Dark2').mode('lch').colors(13);
 
   // Get GeoJSON and put on it on the map when it loads
   airport = L.geoJson.ajax("assets/airports.geojson", {
-      // assign a function to the onEachFeature parameter of the cellTowers object.
+      // assign a function to the onEachFeature parameter of the airport object.
       // Then each (point) feature will bind a popup window.
-      // The content of the popup window is the value of `feature.properties.company`
+      // The content of the popup window is the value of `feature.properties.airport port`
       onEachFeature: function (feature, layer) {
           layer.bindPopup(
           "Airport: " + feature.properties.AIRPT_NAME + "has an air traffic control tower -"
            + feature.properties.CNTL_TWR);
       },
       pointToLayer: function (feature, latlng) {
-          var icon = "fas fa-plane";
+          var icon = "far fa-dot-circle";
           if (feature.properties.CNTL_TWR == "Y") {
-            icon = "far fa-dot-circle";
+            icon = "fas fa-plane";
           }
           return L.marker(latlng, {icon: L.divIcon({className: icon })});
       },
@@ -64,7 +61,7 @@
 
 
   // 6. Set function for color ramp
-  var colors = chroma.scale('Reds').colors(5);
+  var colors = chroma.scale('YlOrRd').colors(5);
 
   function setColor(density) {
       var id = 0;
@@ -102,6 +99,7 @@
 
       // Create Div Element and Populate it with HTML
       var div = L.DomUtil.create('div', 'legend');
+      div.innerHTML += '<br></br>'';
       div.innerHTML += '<b>Airports have air control tower or not</b><br />';
       div.innerHTML += '<i class="fas fa-plane-departure"></i><p>Airport with control tower</p>';
       div.innerHTML += '<i class="far fa-dot-circle"></i><p>Airport without control tower</p>';
@@ -120,7 +118,7 @@
   legend.addTo(mymap);
 
   // 12. Add a scale bar to map
-  L.control.scale({position: 'topright'}).addTo(mymap);
+  L.control.scale({position: 'bottomright'}).addTo(mymap);
 
 </script>
 </body>
